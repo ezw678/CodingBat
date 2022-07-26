@@ -1,5 +1,5 @@
 # CodingBat
 
-Solutions to codingbat problems
+My solutions to codingbat problems
 
 https://codingbat.com/java
