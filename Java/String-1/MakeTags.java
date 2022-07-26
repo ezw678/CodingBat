@@ -4,6 +4,7 @@
 // the HTML string with tags around the word, e.g. "<i>Yay</i>".
 
 public class MakeTags {
+
 	public static void main(String[] args) {
 		String res = makeTags("i", "Yay");
 		System.out.println(res);

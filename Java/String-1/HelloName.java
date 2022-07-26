@@ -1,6 +1,8 @@
-/* Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!". */
+/* Given a string name, e.g. "Bob", return a greeting of the
+form "Hello Bob!". */
 
 public class HelloName {
+
 	public static void main(String[] args) {
 		String res = helloName("Bob");
 		System.out.println(res);
@@ -10,4 +12,5 @@ public class HelloName {
 	public static String helloName(String name) {
 		return "Hello "  + name + "!";
 	}
+
 }
