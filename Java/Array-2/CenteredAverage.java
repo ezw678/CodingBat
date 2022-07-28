@@ -1,0 +1,29 @@
+// Return the "centered" average of an array of ints, which we'll say is the mean
+// average of the values, except ignoring the largest and smallest values in the
+// array. If there are multiple copies of the smallest value, ignore just one copy,
+// and likewise for the largest value. Use int division to produce the final average.
+// You may assume that the array is length 3 or more.
+
+import java.util.Arrays;
+
+public class CenteredAverage {
+
+  public static void main(String[] args) {
+    int [] arr =  {1, 2, 3, 4, 100};
+
+    System.out.println(centeredAverage  (arr));
+    // output: 3
+  }
+
+  public static int centeredAverage(int[] nums) {
+    Arrays.sort(nums);
+
+    int sum = 0;
+    for (int i = 1; i < nums.length - 1; i++) {
+      sum += nums[i];
+    }
+
+    return (sum / (nums.length - 2));
+  }
+
+}
