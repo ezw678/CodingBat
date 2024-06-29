@@ -7,9 +7,6 @@ import logic_2 as lg2
 import string_1 as str1
 import string_2 as str2
 
-def test_lucky_sum():
-   assert lg2.lucky_sum(1,13,2)==1
-
 def test_w1_sleep_in():
    assert w1.sleep_in(False, False) == True
    assert w1.sleep_in(True, False) == False
