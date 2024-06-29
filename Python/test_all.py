@@ -255,4 +255,77 @@ def test_w2_string_match():
    assert w2.string_match('aaxxaaxx', 'iaxxai') == 3	
    assert w2.string_match('iaxxai', 'aaxxaaxx') == 3
 
-   
+def test_lst1_first_last6():
+   assert lst1.first_last6([1, 2, 6]) == True
+   assert lst1.first_last6([6, 1, 2, 3]) == True
+   assert lst1.first_last6([13, 6, 1, 2, 3]) == False	
+   assert lst1.first_last6([13, 6, 1, 2, 6]) == True
+   assert lst1.first_last6([3, 2, 1]) == False	
+   assert lst1.first_last6([3, 6, 1]) == False	
+   assert lst1.first_last6([3, 6]) == True
+   assert lst1.first_last6([6]) == True
+   assert lst1.first_last6([3]) == False	
+   assert lst1.first_last6([5, 6]) == True
+   assert lst1.first_last6([5, 5]) == False	
+   assert lst1.first_last6([1, 2, 3, 4, 6]) == True
+   assert lst1.first_last6([1, 2, 3, 4]) == False
+
+def test_lst1_same_first_last():
+   assert lst1.same_first_last([1, 2, 3]) == False	
+   assert lst1.same_first_last([1, 2, 3, 1]) == True
+   assert lst1.same_first_last([1, 2, 1]) == True
+   assert lst1.same_first_last([7]) == True
+   assert lst1.same_first_last([]) == False	
+   assert lst1.same_first_last([1, 2, 3, 4, 5, 1]) == True
+   assert lst1.same_first_last([1, 2, 3, 4, 5, 13]) == False	
+   assert lst1.same_first_last([13, 2, 3, 4, 5, 13]) == True
+   assert lst1.same_first_last([7, 7]) == True
+
+def test_lst1_rotate_left3():
+   assert lst1.rotate_left3([1, 2, 3]) == [2, 3, 1]	
+   assert lst1.rotate_left3([5, 11, 9]) == [11, 9, 5]	
+   assert lst1.rotate_left3([7, 0, 0]) == [0, 0, 7]
+   assert lst1.rotate_left3([1, 2, 1]) == [2, 1, 1]
+   assert lst1.rotate_left3([0, 0, 1]) == [0, 1, 0]
+
+def test_lst1_reverse3():
+   assert lst1.reverse3([1, 2, 3]) == [3, 2, 1]
+   assert lst1.reverse3([5, 11, 9]) == [9, 11, 5]	
+   assert lst1.reverse3([7, 0, 0]) == [0, 0, 7]
+   assert lst1.reverse3([2, 1, 2]) == [2, 1, 2]
+   assert lst1.reverse3([1, 2, 1]) == [1, 2, 1]
+   assert lst1.reverse3([2, 11, 3]) == [3, 11, 2]	
+   assert lst1.reverse3([0, 6, 5]) == [5, 6, 0]
+   assert lst1.reverse3([7, 2, 3]) == [3, 2, 7]
+
+def test_lst1_max_end3():
+   assert lst1.max_end3([1, 2, 3]) == [3, 3, 3]
+   assert lst1.max_end3([11, 5, 9]) == [11, 11, 11]	
+   assert lst1.max_end3([2, 11, 3]) == [3, 3, 3]
+   assert lst1.max_end3([11, 3, 3]) == [11, 11, 11]	
+   assert lst1.max_end3([3, 11, 11]) == [11, 11, 11]
+   assert lst1.max_end3([2, 2, 2]) == [2, 2, 2]
+   assert lst1.max_end3([2, 11, 2]) == [2, 2, 2]
+   assert lst1.max_end3([0, 0, 1]) == [1, 1, 1]
+
+def test_lst1_sum2():
+   assert lst1.sum2([1, 2, 3]) == 3	
+   assert lst1.sum2([1, 1]) == 2	
+   assert lst1.sum2([1, 1, 1, 1]) == 2	
+   assert lst1.sum2([1, 2]) == 3	
+   assert lst1.sum2([1]) == 1	
+   assert lst1.sum2([]) == 0	
+   assert lst1.sum2([4, 5, 6]) == 9	
+   assert lst1.sum2([4]) == 4	
+
+def test_lst1_has23():
+   assert lst1.has23([2, 5]) == True
+   assert lst1.has23([4, 3]) == True
+   assert lst1.has23([4, 5]) == False	
+   assert lst1.has23([2, 2]) == True
+   assert lst1.has23([3, 2]) == True
+   assert lst1.has23([3, 3]) == True
+   assert lst1.has23([7, 7]) == False	
+   assert lst1.has23([3, 9]) == True
+   assert lst1.has23([9, 5]) == False
+
