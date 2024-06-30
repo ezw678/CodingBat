@@ -329,3 +329,61 @@ def test_lst1_has23():
    assert lst1.has23([3, 9]) == True
    assert lst1.has23([9, 5]) == False
 
+def test_lst2_count_evens():
+   assert lst2.count_evens([2, 1, 2, 3, 4]) == 3	
+   assert lst2.count_evens([2, 2, 0]) == 3	
+   assert lst2.count_evens([1, 3, 5]) == 0	
+   assert lst2.count_evens([]) == 0	
+   assert lst2.count_evens([11, 9, 0, 1]) == 1	
+   assert lst2.count_evens([2, 11, 9, 0]) == 2	
+   assert lst2.count_evens([2]) == 1	
+   assert lst2.count_evens([2, 5, 12]) == 2	
+
+def test_lst2_sum13():
+   assert lst2.sum13([1, 2, 2, 1]) == 6	
+   assert lst2.sum13([1, 1]) == 2	
+   assert lst2.sum13([1, 2, 2, 1, 13]) == 6	
+   assert lst2.sum13([1, 2, 13, 2, 1, 13]) == 4	
+   assert lst2.sum13([13, 1, 2, 13, 2, 1, 13]) == 3	
+   assert lst2.sum13([]) == 0	
+   assert lst2.sum13([13]) == 0	
+   assert lst2.sum13([13, 13]) == 0	
+   assert lst2.sum13([13, 0, 13]) == 0	
+   assert lst2.sum13([13, 1, 13]) == 0	
+   assert lst2.sum13([5, 7, 2]) == 14	
+   assert lst2.sum13([5, 13, 2]) == 5	
+   assert lst2.sum13([0]) == 0	
+   assert lst2.sum13([13, 0]) == 0	
+
+def test_lst2_sum67():
+   assert lst2.sum67([1, 2, 2]) == 5	
+   assert lst2.sum67([1, 2, 2, 6, 99, 99, 7]) == 5	
+   assert lst2.sum67([1, 1, 6, 7, 2]) == 4	
+   assert lst2.sum67([1, 6, 2, 2, 7, 1, 6, 99, 99, 7]) == 2	
+   assert lst2.sum67([1, 6, 2, 6, 2, 7, 1, 6, 99, 99, 7]) == 2	
+   assert lst2.sum67([2, 7, 6, 2, 6, 7, 2, 7]) == 18	
+   assert lst2.sum67([2, 7, 6, 2, 6, 2, 7]) == 9	
+   assert lst2.sum67([1, 6, 7, 7]) == 8	
+   assert lst2.sum67([6, 7, 1, 6, 7, 7]) == 8	
+   assert lst2.sum67([6, 8, 1, 6, 7]) == 0	
+   assert lst2.sum67([]) == 0	
+   assert lst2.sum67([6, 7, 11]) == 11	
+   assert lst2.sum67([11, 6, 7, 11]) == 22	
+   assert lst2.sum67([2, 2, 6, 7, 7]) == 11	
+
+def test_lst2_has22():
+   assert lst2.has22([1, 2, 2]) == True
+   assert lst2.has22([1, 2, 1, 2]) == False	
+   assert lst2.has22([2, 1, 2]) == False	
+   assert lst2.has22([2, 2, 1, 2]) == True
+   assert lst2.has22([1, 3, 2]) == False	
+   assert lst2.has22([1, 3, 2, 2]) == True
+   assert lst2.has22([2, 3, 2, 2]) == True
+   assert lst2.has22([4, 2, 4, 2, 2, 5]) == True
+   assert lst2.has22([1, 2]) == False	
+   assert lst2.has22([2, 2]) == True
+   assert lst2.has22([2]) == False	
+   assert lst2.has22([]) == False	
+   assert lst2.has22([3, 3, 2, 2]) == True
+   assert lst2.has22([5, 2, 5, 2]) == False	
+

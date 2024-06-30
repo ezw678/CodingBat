@@ -71,3 +71,8 @@ def make_ends(nums):
 def has23(nums):
   return 2 in nums or 3 in nums
 
+def main():
+  pass
+
+if __name__ == '__main__':
+  main()
