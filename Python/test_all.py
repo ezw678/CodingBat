@@ -14,7 +14,7 @@ def test_w1_sleep_in():
    assert w1.sleep_in(True, True) ==True
 
 def test_monkey_trouble():
-   assert w1.monkey_trouble(True, True) == True	
+   assert w1.monkey_trouble(True, True) == True
    assert w1.monkey_trouble(False, False) ==  True	
    assert w1.monkey_trouble(True, False) ==  False	
    assert w1.monkey_trouble(False, True) ==  False	
