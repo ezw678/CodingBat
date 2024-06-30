@@ -14,7 +14,6 @@ public class WordEnds {
 
   public static String wordEnds(String str, String word) {
     int len = str.length();
-    StringBuilder sb = new StringBuilder(str);
 
     String res = "";
     for (int i = 0; i < len;) {

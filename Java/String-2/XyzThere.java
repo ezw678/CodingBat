@@ -11,21 +11,7 @@ public class XyzThere {
   }
 
   public static boolean xyzThere(String str) {
-    int index = str.indexOf("xyz");
-
-    if (index < 0) return false;
-
-    if (index == 0 || (index > 0 && str.charAt(index - 1) != '.'))
-      return true;
-    else {
-      for (int i = index + 3; i < str.length() - 2; i++) {
-        String s = str.substring(i, i + 3);
-        if (s.equals("xyz") && str.charAt(i - 1) != '.')
-          return true;
-      }
-    }
-
-    return false;
+    return str.matches(".*(?<!\\.)xyz.*");
   }
 
 }
