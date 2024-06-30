@@ -4,8 +4,8 @@ import list_1 as lst1
 import list_2 as lst2
 import logic_1 as lg1
 import logic_2 as lg2
-import string_1 as str1
 import string_2 as str2
+from hypothesis import given, strategies as st
 
 def test_w1_sleep_in():
    assert w1.sleep_in(False, False) == True
@@ -655,4 +655,40 @@ def test_lg2_make_chocolate():
    assert lg2.make_chocolate(7, 1, 12) == 7
    assert lg2.make_chocolate(7, 1, 13) == -1	
    assert lg2.make_chocolate(7, 2, 13) == 3
+
+def test_str2_count_code():
+   assert str2.count_code_1('aaacodebbb') == 1	
+   assert str2.count_code_1('codexxcode') == 2	
+   assert str2.count_code_1('cozexxcope') == 2	
+   assert str2.count_code_1('cozfxxcope') == 1	
+   assert str2.count_code_1('xxcozeyycop') == 1	
+   assert str2.count_code_1('cozcop') == 0	
+   assert str2.count_code_1('abcxyz') == 0	
+   assert str2.count_code_1('code') == 1	
+   assert str2.count_code_1('ode') == 0	
+   assert str2.count_code_1('c') == 0	
+   assert str2.count_code_1('') == 0	
+   assert str2.count_code_1('AAcodeBBcoleCCccoreDD') == 3	
+   assert str2.count_code_1('AAcodeBBcoleCCccorfDD') == 2	
+   assert str2.count_code_1('coAcodeBcoleccoreDD') == 3
+
+@given (st.text())
+def test_str2_count_code_1_2(s):
+   assert str2.count_code_1(s) == str2.count_code_2(s)
+
+def test_str2_xyz_there():
+   assert str2.xyz_there('abcxyz') == True
+   assert str2.xyz_there('abc.xyz') == False	
+   assert str2.xyz_there('xyz.abc') == True
+   assert str2.xyz_there('abcxy') == False	
+   assert str2.xyz_there('xyz') == True
+   assert str2.xyz_there('xy') == False	
+   assert str2.xyz_there('x') == False	
+   assert str2.xyz_there('') == False	
+   assert str2.xyz_there('abc.xyzxyz') == True
+   assert str2.xyz_there('abc.xxyz') == True
+   assert str2.xyz_there('.xyz') == False	
+   assert str2.xyz_there('12.xyz') == False	
+   assert str2.xyz_there('12xyz') == True
+   assert str2.xyz_there('1.xyz.xyz2.xyz') == False
 
